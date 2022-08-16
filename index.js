@@ -3,14 +3,14 @@ const cors = require('cors');
 
 const app=express();
 
-const port=4000;
+const port = process.env.PORT || 4000;
 
 // const util=require('./routes/util.js')
 
 const fileRouter=require('./routes/fileRouter')
 const utilRouter=require('./routes/util')
 
-app.use(cors());
+app.use(cors({origin : ['https://demofrontend01.herokuapp.com']}));
 app.use(express.json());
 
 app.use('/util',utilRouter);
