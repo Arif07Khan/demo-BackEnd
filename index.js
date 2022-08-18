@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000;
 const fileRouter=require('./routes/fileRouter')
 const utilRouter=require('./routes/util')
 
-app.use(cors({origin : ['https://demofrontend01.herokuapp.com']}));
+app.use(cors({origin : ['https://demofrontend01.herokuapp.com', 'http://localhost:3001']}));
 app.use(express.json());
 
 app.use('/util',utilRouter);
