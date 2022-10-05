@@ -5,7 +5,6 @@ const FileType=new Schema({
     type: String,
     size: String,
     preview: String,
-    file: String,
 })
 
 module.exports = model('File', FileType);
